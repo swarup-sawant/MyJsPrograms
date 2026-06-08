@@ -3,20 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>card</title>
 </head>
 <body>
+    <style>
+        button{
+            border: none;
+            border-radius: 50px;
+            background-color: skyblue;
+            color: darkred;
+            margin: 2%;
+            padding: 2%;
+        }
+    </style>
+    <Button onclick="
+        console.log(`cartQuantity : ${CartQuantity}`)
+    ">show quantity</Button>
+
+    <button onclick="
+        CartQuantity = CartQuantity + 1;
+        console.log(`cartQuantity : ${CartQuantity}`)
+    ">Add to card</button>
+
+    <button onclick="
+        CartQuantity = CartQuantity + 2;
+        console.log(`cartQuantity : ${CartQuantity}`)
+    ">+2</button>
+
+    <button onclick="
+        CartQuantity = CartQuantity + 3;
+        console.log(`cartQuantity : ${CartQuantity}`)
+    ">+3</button>
+    
+    <button onclick="
+        CartQuantity = 0;
+        console.log(`cartQuantity : ${CartQuantity}`)
+    ">Reset Cart</button>
+    
     <script>
-        let variable1 = 3;
-        console.log(variable1);
-
-        let result = 4+4;
-        console.log(result);
-
-        let name = 'my name is swarup..';
-        console.log(name);
-
-        
+        let CartQuantity = 0;
     </script>
+
+
 </body>
 </html>
+
+<!-- Output of console :
+cartQuantity : 0
+05-variables.html:28 cartQuantity : 1
+05-variables.html:33 cartQuantity : 3
+05-variables.html:38 cartQuantity : 6
+05-variables.html:43 cartQuantity : 0 -->
