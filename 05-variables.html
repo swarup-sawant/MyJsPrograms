@@ -21,36 +21,39 @@
     ">show quantity</Button>
 
     <button onclick="
-        CartQuantity = CartQuantity + 1;
+        CartQuantity++;
         console.log(`cartQuantity : ${CartQuantity}`)
     ">Add to card</button>
 
     <button onclick="
-        CartQuantity = CartQuantity + 2;
+        CartQuantity += 2;
         console.log(`cartQuantity : ${CartQuantity}`)
     ">+2</button>
 
     <button onclick="
-        CartQuantity = CartQuantity + 3;
+        CartQuantity += 3;
         console.log(`cartQuantity : ${CartQuantity}`)
     ">+3</button>
     
     <button onclick="
         CartQuantity = 0;
+        console.log('the Cart was reset.');
         console.log(`cartQuantity : ${CartQuantity}`)
     ">Reset Cart</button>
     
     <script>
         let CartQuantity = 0;
+
+        const var2 = 22;
+        //value does not change;;
+
+        var var3 = 33;
+        //original way , older js.
+
+        console.log(typeof var2);
     </script>
 
 
 </body>
 </html>
 
-<!-- Output of console :
-cartQuantity : 0
-05-variables.html:28 cartQuantity : 1
-05-variables.html:33 cartQuantity : 3
-05-variables.html:38 cartQuantity : 6
-05-variables.html:43 cartQuantity : 0 -->
