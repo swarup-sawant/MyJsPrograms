@@ -18,6 +18,40 @@
         greet();
         greet("swarup");
 
+        function convertToFahrenheit(celsius){
+            const fahrenheit = (celsius * 9/5) + 32;
+            console.log(`${fahrenheit}F`);
+        }
+
+        function convertToCelsius(fahrenheit){
+            const celsius = (fahrenheit - 32) * 5/9;
+            console.log(`${celsius}C`);
+        }
+
+        function convertTemprature(degrees,unit){
+            if(unit === 'C'){
+                convertToFahrenheit(degrees);
+            } else if(unit === 'F'){
+                convertToCelsius(degrees);
+            } 
+        }
+
+        convertTemprature(25,'C');
+        convertTemprature(86,'F');
+
+        function convertLength(length, from, to){
+            if(from === 'miles' && to === 'km'){
+                return `${length * 1.6} km`;
+            } else if(from === 'km' && to === 'mile'){
+                return `${length / 1.6} miles`;
+            } else if(from === to){
+                return`${length} ${to}`;
+            }
+        }
+
+        console.log(convertLength(50,'miles','km'));
+        console.log(convertLength(32,'km','mile'));
+        console.log(convertLength(50,'km','km')); 
     </script>
 </body>
 </html>
